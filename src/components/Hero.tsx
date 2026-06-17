@@ -1,14 +1,16 @@
 "use client";
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
+import { PreviewCard } from "./Cards/PreviewCard";
 
 export const Hero = () => {
   return (
     <section className='px-5 py-20'>
       
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-6xl mx-auto grid gap-12 lg:grid-cols-2 items-canter'>
 
         <motion.div
+          className="text-center lg:text-left"
           initial={{ opacity: 0, y: 30}}
           animate ={{ opacity: 1, y: 0 }}
           transition={{ duration: .6 }}
@@ -48,6 +50,7 @@ export const Hero = () => {
         
         </motion.div>
 
+        <PreviewCard />
       </div>
     </section>
   )
